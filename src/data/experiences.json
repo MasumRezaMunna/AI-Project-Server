@@ -1,0 +1,471 @@
+[
+  {
+    "id": "patagonia-trekking",
+    "title": "Patagonia Trekking Expedition",
+    "category": "Adventure",
+    "location": "Torres del Paine",
+    "country": "Chile",
+    "shortDescription": "A five-day trek through granite spires, glacial lakes, and windswept steppe in one of the last wild corners of the planet.",
+    "description": "Torres del Paine National Park is a 2,400-square-kilometre stretch of Patagonian wilderness where three granite towers rise nearly 2,800 metres straight out of the steppe. This trek follows the classic 'W' route, threading between turquoise glacial lakes, the hanging ice of Glacier Grey, and the French Valley before finishing at the base of the towers themselves at sunrise, when the granite turns a deep rose-gold. You'll sleep in refugios with hot showers and real beds, so the focus stays on the trail, not on pitching tents in 60 km/h wind. Guides are local Patagonian mountaineers who know the park's microclimates and can read an incoming storm an hour before it arrives.",
+    "images": [
+      "https://images.unsplash.com/photo-1531065208531-4036c0dba3ca?w=1200&q=80",
+      "https://images.unsplash.com/photo-1518182170546-07661fd94144?w=1200&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80"
+    ],
+    "price": 1190,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 312,
+    "durationDays": 5,
+    "groupSize": "4-10 people",
+    "difficulty": "Challenging",
+    "highlights": [
+      "Sunrise viewing of the three granite towers from the base camp lookout",
+      "Crossing the suspension bridge above Glacier Grey's calving face",
+      "Two nights in mountain refugios with hot showers and cooked meals",
+      "Small groups capped at 10 trekkers per guide"
+    ],
+    "includes": [
+      "Certified mountain guide for all 5 days",
+      "4 nights refugio accommodation, 1 night in Puerto Natales",
+      "All park entrance fees and catamaran crossing",
+      "Breakfast, lunch, and dinner on trail days"
+    ],
+    "tags": ["hiking", "mountains", "wilderness", "glaciers"],
+    "reviews": [
+      { "id": "r1", "author": "Marco T.", "rating": 5, "comment": "Our guide Felipe spotted a weather window nobody else saw and got us to the towers right as the light broke through. Worth every blister.", "date": "2026-03-14" },
+      { "id": "r2", "author": "Hana K.", "rating": 5, "comment": "Physically the hardest thing I've done on a trip, but the refugios made it sustainable. Hot soup after 18km in the wind is unforgettable.", "date": "2026-02-02" },
+      { "id": "r3", "author": "Owen R.", "rating": 4, "comment": "Incredible scenery throughout. Wind on day 3 was brutal, came close to turning back at French Valley.", "date": "2025-12-20" }
+    ],
+    "createdAt": "2025-09-01"
+  },
+  {
+    "id": "tuscany-truffle-wine",
+    "title": "Tuscany Truffle Hunting & Wine Tasting",
+    "category": "Culinary",
+    "location": "San Miniato, Tuscany",
+    "country": "Italy",
+    "shortDescription": "Forage for white truffles with a third-generation hunter and his dog, then pair the day's haul with Sangiovese at a family vineyard.",
+    "description": "San Miniato's oak forests sit on a particular vein of clay-rich soil that produces some of Italy's most prized white truffles, and the Bartolini family has hunted them here for three generations. You'll head into the woods at dawn with Giorgio and his truffle dog Luna, learning to read the soil disturbance and root systems that signal a find. Back at the family's stone farmhouse, a private cook shaves the morning's truffles over fresh tagliolini while you taste through five Sangiovese-based wines from the estate's own vineyard, paired with course notes from the family's sommelier daughter.",
+    "images": [
+      "https://images.unsplash.com/photo-1474440692490-2e83ae13ba29?w=1200&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80",
+      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1200&q=80"
+    ],
+    "price": 245,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 188,
+    "durationDays": 1,
+    "groupSize": "2-8 people",
+    "difficulty": "Easy",
+    "highlights": [
+      "Dawn truffle hunt with a working dog and hereditary hunting rights",
+      "Five-wine tasting paired with truffle-shaved dishes",
+      "Take home a jar of truffle-infused olive oil from the estate",
+      "Hosted entirely at a private working farmhouse, not a tourist venue"
+    ],
+    "includes": [
+      "Truffle hunt with guide and dog",
+      "Multi-course lunch featuring the day's truffle haul",
+      "Five-wine tasting flight",
+      "Round-trip transfer from central Florence"
+    ],
+    "tags": ["food", "wine", "countryside", "family-run"],
+    "reviews": [
+      { "id": "r1", "author": "Priya S.", "rating": 5, "comment": "Luna found three truffles in twenty minutes and Giorgio let my daughter hold one. Lunch afterward was the best meal of our whole Italy trip.", "date": "2026-01-18" },
+      { "id": "r2", "author": "Daniel W.", "rating": 5, "comment": "Felt like visiting family, not a tour. The Sangiovese with truffle pasta is a pairing I think about often.", "date": "2025-11-05" }
+    ],
+    "createdAt": "2025-08-12"
+  },
+  {
+    "id": "kyoto-tea-temple",
+    "title": "Kyoto Tea Ceremony & Hidden Temple Walk",
+    "category": "Cultural",
+    "location": "Higashiyama, Kyoto",
+    "country": "Japan",
+    "shortDescription": "A formal tea ceremony with a tea master, followed by a quiet walk through temples most visitors never find.",
+    "description": "Higashiyama's main lanes draw crowds, but a five-minute detour leads to a 400-year-old machiya where tea master Watanabe-sensei has taught the Urasenboryu tradition for over thirty years. You'll learn the choreography of preparing and receiving matcha, then walk with a local historian through three temples tucked into the hillside, including a moss garden closed to general admission. The route ends at a small noodle shop the historian has eaten at since childhood, with no English menu and no other tourists.",
+    "images": [
+      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&q=80",
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?w=1200&q=80"
+    ],
+    "price": 165,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 241,
+    "durationDays": 1,
+    "groupSize": "1-6 people",
+    "difficulty": "Easy",
+    "highlights": [
+      "Formal tea ceremony taught by a 30-year Urasenke practitioner",
+      "Access to a private moss garden closed to the public",
+      "Local historian guide for temple history and etiquette",
+      "Lunch at a noodle shop with no tourist foot traffic"
+    ],
+    "includes": [
+      "Tea ceremony instruction and matcha tasting",
+      "Entrance fees to all temples on the route",
+      "Local historian guide for 4 hours",
+      "Noodle lunch"
+    ],
+    "tags": ["culture", "temples", "tea ceremony", "walking"],
+    "reviews": [
+      { "id": "r1", "author": "Lena F.", "rating": 5, "comment": "The moss garden alone was worth it, but the tea ceremony was the real highlight. Watanabe-sensei is patient and funny.", "date": "2026-04-02" },
+      { "id": "r2", "author": "Tomás G.", "rating": 4, "comment": "Wonderful pace, never felt rushed. Would have liked a bit more time at the final temple.", "date": "2026-01-29" }
+    ],
+    "createdAt": "2025-07-22"
+  },
+  {
+    "id": "serengeti-migration-safari",
+    "title": "Serengeti Migration Safari",
+    "category": "Wildlife",
+    "location": "Serengeti National Park",
+    "country": "Tanzania",
+    "shortDescription": "Track the wildebeest migration across the Serengeti plains in an open-sided 4x4, with two nights in a tented camp on the herd's route.",
+    "description": "Each year roughly 1.5 million wildebeest move in a clockwise loop across the Serengeti and Maasai Mara, and timing matters more than almost anything else on safari. This itinerary is scheduled against the current migration data to put you near a river crossing or a calving ground depending on season. You'll travel in a 6-seat open-sided vehicle with a dedicated driver-guide who radios other guides across the park, and stay two nights at a seasonal tented camp that moves with the herd, meaning the camp itself is inside the migration's path rather than a fixed lodge miles away.",
+    "images": [
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=80",
+      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1535941339077-2dd1c7963098?w=1200&q=80"
+    ],
+    "price": 1480,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 276,
+    "durationDays": 4,
+    "groupSize": "2-6 people",
+    "difficulty": "Moderate",
+    "highlights": [
+      "Itinerary timed to the current migration position, not a fixed route",
+      "Seasonal tented camp that relocates with the herd",
+      "Maximum 6 guests per vehicle for unobstructed sightlines",
+      "Guide-to-guide radio network for real-time sighting reports"
+    ],
+    "includes": [
+      "All park and conservancy fees",
+      "3 nights tented camp, full board",
+      "Daily game drives in an open 4x4",
+      "Light aircraft transfer from Arusha"
+    ],
+    "tags": ["safari", "wildlife", "migration", "camping"],
+    "reviews": [
+      { "id": "r1", "author": "Sarah J.", "rating": 5, "comment": "We watched a river crossing from 40 metres away with no other vehicles in sight. Our guide Emanuel's instincts were uncanny.", "date": "2026-03-30" },
+      { "id": "r2", "author": "Felix N.", "rating": 5, "comment": "The moving camp concept is genius — woke up to lions calling about a kilometre from the tent.", "date": "2026-02-14" }
+    ],
+    "createdAt": "2025-09-18"
+  },
+  {
+    "id": "bali-sound-healing",
+    "title": "Bali Sound Healing & Jungle Retreat",
+    "category": "Wellness",
+    "location": "Ubud",
+    "country": "Indonesia",
+    "shortDescription": "A three-day retreat combining gong baths, sunrise yoga over rice terraces, and a traditional Balinese healer session.",
+    "description": "Set on the edge of the Campuhan Ridge, this retreat is built around a daily rhythm rather than a packed itinerary: sunrise yoga on a platform overlooking the rice terraces, an afternoon free for the jungle pool or a rice-terrace walk, and an evening gong and singing-bowl sound bath led by a Balinese sound healer trained in the Ubud tradition. On the second day, a traditional healer (balian) leads an optional one-on-one session, a practice still central to Balinese village life. Meals are plant-based, sourced from the retreat's own garden and the Ubud morning market.",
+    "images": [
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80",
+      "https://images.unsplash.com/photo-1518002171953-a080ee817e1f?w=1200&q=80",
+      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=80"
+    ],
+    "price": 390,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 154,
+    "durationDays": 3,
+    "groupSize": "4-14 people",
+    "difficulty": "Easy",
+    "highlights": [
+      "Sunrise yoga overlooking the Campuhan rice terraces",
+      "Evening gong and singing-bowl sound healing sessions",
+      "Optional traditional Balinese healer (balian) consultation",
+      "Entirely plant-based meals from the retreat's own garden"
+    ],
+    "includes": [
+      "2 nights jungle-view accommodation",
+      "Daily yoga and sound healing sessions",
+      "All meals (plant-based)",
+      "Airport transfer from Denpasar"
+    ],
+    "tags": ["yoga", "wellness", "retreat", "meditation"],
+    "reviews": [
+      { "id": "r1", "author": "Maya C.", "rating": 5, "comment": "The gong bath on night two is something I still think about. Genuinely reset my nervous system.", "date": "2026-04-10" },
+      { "id": "r2", "author": "Ben O.", "rating": 4, "comment": "Loved the unstructured afternoons. Food was incredible — wish I'd booked a fourth night.", "date": "2026-01-08" }
+    ],
+    "createdAt": "2025-10-03"
+  },
+  {
+    "id": "amalfi-sailing",
+    "title": "Amalfi Coast Sailing Adventure",
+    "category": "Coastal",
+    "location": "Positano",
+    "country": "Italy",
+    "shortDescription": "A full day sailing the Amalfi coastline on a traditional gozzo boat, with swim stops at coves only reachable by water.",
+    "description": "This trip runs on a restored 1960s wooden gozzo rather than a standard charter boat, captained by a Positano native who grew up fishing this coast. You'll sail past Praiano and the Li Galli islets to coves with no road access — places where the water is genuinely a different shade of blue because no beach runoff reaches them. The boat anchors for swimming and snorkelling at two coves, and lunch is grilled on board: the captain's wife preps a catch-of-the-day with lemons from the family's own terraced grove above Positano.",
+    "images": [
+      "https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=1200&q=80",
+      "https://images.unsplash.com/photo-1530841344095-d4b3cc9ed2dc?w=1200&q=80",
+      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80"
+    ],
+    "price": 210,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 203,
+    "durationDays": 1,
+    "groupSize": "2-10 people",
+    "difficulty": "Easy",
+    "highlights": [
+      "Restored 1960s wooden gozzo boat, not a standard charter",
+      "Swim and snorkel stops at coves with no road access",
+      "On-board lunch grilled with produce from the captain's family grove",
+      "Sail past the Li Galli islets and Praiano cliffs"
+    ],
+    "includes": [
+      "Full-day boat charter with captain",
+      "Snorkelling equipment",
+      "On-board grilled lunch and local wine",
+      "Pickup from Positano marina"
+    ],
+    "tags": ["sailing", "coast", "swimming", "boat"],
+    "reviews": [
+      { "id": "r1", "author": "Claire D.", "rating": 5, "comment": "The water at the second cove was almost violet. Lunch was better than most restaurants we ate at that week.", "date": "2026-05-01" },
+      { "id": "r2", "author": "Jordan P.", "rating": 5, "comment": "Captain Enzo knows every inch of this coastline. Far better than the big group catamaran tours.", "date": "2026-02-26" }
+    ],
+    "createdAt": "2025-08-30"
+  },
+  {
+    "id": "zermatt-via-ferrata",
+    "title": "Swiss Alps Via Ferrata Climb",
+    "category": "Mountain",
+    "location": "Zermatt",
+    "country": "Switzerland",
+    "shortDescription": "A guided via ferrata route above Zermatt with the Matterhorn in constant view, suited to fit beginners with no climbing experience.",
+    "description": "The Gorner Gorge via ferrata climbs a set of fixed cables and iron rungs bolted into the rock above Zermatt, gaining exposure gradually so first-timers can build confidence before the route's more dramatic sections. Your guide is an IFMGA-certified Zermatt local who has climbed the Matterhorn itself over forty times and threads the route's timing so you reach the exposed ridge section in clear afternoon light, with the Matterhorn's north face filling the skyline. Full safety equipment and a pre-climb technique session are included, so prior via ferrata experience isn't required, just a reasonable fitness level and comfort with heights.",
+    "images": [
+      "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=1200&q=80",
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=80",
+      "https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=80"
+    ],
+    "price": 295,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 167,
+    "durationDays": 1,
+    "groupSize": "2-6 people",
+    "difficulty": "Challenging",
+    "highlights": [
+      "Constant Matterhorn views from the exposed ridge section",
+      "IFMGA-certified guide with 40+ Matterhorn summits",
+      "Pre-climb technique session for first-time via ferrata climbers",
+      "Full safety harness, helmet, and via ferrata kit included"
+    ],
+    "includes": [
+      "IFMGA mountain guide for the full day",
+      "All climbing safety equipment",
+      "Pre-climb technique briefing",
+      "Trail snacks and water"
+    ],
+    "tags": ["climbing", "alps", "matterhorn", "adventure"],
+    "reviews": [
+      { "id": "r1", "author": "Niklas B.", "rating": 5, "comment": "Never done via ferrata before and felt completely safe the whole time. The ridge section with the Matterhorn behind you is unreal.", "date": "2026-06-02" },
+      { "id": "r2", "author": "Isabelle M.", "rating": 4, "comment": "Guide was excellent, very reassuring on the exposed sections. Bring better gloves than I did.", "date": "2026-03-21" }
+    ],
+    "createdAt": "2025-09-25"
+  },
+  {
+    "id": "marrakech-food-crawl",
+    "title": "Marrakech Medina Food Crawl",
+    "category": "Culinary",
+    "location": "Medina, Marrakech",
+    "country": "Morocco",
+    "shortDescription": "A night-time walking food tour through six family-run stalls in the medina, guided by a Marrakchi food writer.",
+    "description": "Hosted by Amal, a Marrakech-born food writer who has spent a decade documenting the city's street food vendors, this crawl moves through six stops most guidebooks miss: a third-generation harira stall, a tanjia cook who buries clay pots in the embers of a hammam furnace, a snail soup vendor at Jemaa el-Fnaa, and a family bakery that has made the same msemen recipe since the 1970s. Amal translates not just the food but the etiquette: when to use bread instead of a fork, how to order without over-paying, and which stalls value a quiet nod over small talk.",
+    "images": [
+      "https://images.unsplash.com/photo-1489493887464-892be6d1daae?w=1200&q=80",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80",
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&q=80"
+    ],
+    "price": 75,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 298,
+    "durationDays": 1,
+    "groupSize": "2-8 people",
+    "difficulty": "Easy",
+    "highlights": [
+      "Six stops chosen by a local food writer, not a tourist circuit",
+      "Tanjia cooked in buried clay pots over hammam furnace embers",
+      "Night-time route through the medina's quieter food lanes",
+      "Etiquette and ordering guidance from a Marrakech native"
+    ],
+    "includes": [
+      "All food and drink tastings at six stops",
+      "Local guide for 3.5 hours",
+      "Bottled water throughout",
+      "Medina meeting point with clear directions"
+    ],
+    "tags": ["food", "walking tour", "night", "street food"],
+    "reviews": [
+      { "id": "r1", "author": "Yusuf A.", "rating": 5, "comment": "The tanjia stop alone justified the whole tour. Amal's stories about each vendor made it feel personal, not touristy.", "date": "2026-04-18" },
+      { "id": "r2", "author": "Grace L.", "rating": 5, "comment": "Best food tour I've done anywhere. Six stops is the right amount — full but not stuffed.", "date": "2026-01-15" }
+    ],
+    "createdAt": "2025-07-08"
+  },
+  {
+    "id": "iceland-northern-lights",
+    "title": "Iceland Northern Lights Hunt",
+    "category": "Adventure",
+    "location": "Reykjavik & South Coast",
+    "country": "Iceland",
+    "shortDescription": "A two-night chase across Iceland's south coast, following real-time aurora forecasts to the clearest, darkest sky available.",
+    "description": "Rather than a fixed bus route, this trip is planned night-to-night around the Icelandic Met Office's aurora and cloud-cover forecasts, so the group moves to wherever the sky is clearest, sometimes a black-sand beach near Vík, sometimes a quiet inland valley. Your guide is a former geophysicist who explains the solar wind activity driving each night's display while you wait. Daytime is spent at Reynisfjara's basalt columns, the Skógafoss waterfall, and a geothermal lagoon to warm up between night drives.",
+    "images": [
+      "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=1200&q=80",
+      "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=1200&q=80",
+      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80"
+    ],
+    "price": 540,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 221,
+    "durationDays": 3,
+    "groupSize": "2-12 people",
+    "difficulty": "Moderate",
+    "highlights": [
+      "Nightly routes chosen by real-time aurora and cloud forecasts",
+      "Guide with a geophysics background explains the science live",
+      "Daytime stops at Reynisfjara, Skógafoss, and a geothermal lagoon",
+      "Small-group night drives, never more than 12 guests"
+    ],
+    "includes": [
+      "2 nights accommodation on the south coast",
+      "All night aurora-chasing drives",
+      "Daytime sightseeing stops with guide",
+      "Geothermal lagoon entry"
+    ],
+    "tags": ["aurora", "winter", "nature", "photography"],
+    "reviews": [
+      { "id": "r1", "author": "Erik S.", "rating": 5, "comment": "We struck out the first night but our guide rerouted us 90 minutes inland on night two and it paid off massively.", "date": "2026-02-09" },
+      { "id": "r2", "author": "Naomi T.", "rating": 4, "comment": "Even without strong aurora activity, Reynisfjara and Skógafoss made the trip worthwhile on their own.", "date": "2025-12-30" }
+    ],
+    "createdAt": "2025-10-20"
+  },
+  {
+    "id": "new-orleans-jazz-night",
+    "title": "New Orleans Jazz & Cuisine Night",
+    "category": "City",
+    "location": "Tremé & French Quarter",
+    "country": "USA",
+    "shortDescription": "An evening through Tremé's jazz clubs with a working musician as your guide, plus a Creole dinner away from the Bourbon Street crowds.",
+    "description": "Tremé is the neighbourhood where jazz as we know it largely came together, and this tour is led by Curtis, a trombone player who has gigged in the neighbourhood's clubs for over fifteen years. He walks you through the area's musical history before settling into two clubs for live sets, neither of which appear on typical tourist maps. Dinner is at a family-run Creole kitchen a few blocks off Bourbon Street, where the gumbo recipe hasn't changed in three generations.",
+    "images": [
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80",
+      "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=1200&q=80",
+      "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=1200&q=80"
+    ],
+    "price": 120,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 176,
+    "durationDays": 1,
+    "groupSize": "2-8 people",
+    "difficulty": "Easy",
+    "highlights": [
+      "Guided by an active working jazz musician from the neighbourhood",
+      "Live sets at two clubs off the standard tourist circuit",
+      "Three-generation family Creole dinner included",
+      "Walking history of Tremé as the birthplace of jazz"
+    ],
+    "includes": [
+      "Local musician guide for the evening",
+      "Cover charges at both clubs",
+      "Creole dinner with one drink",
+      "Meeting point in the French Quarter"
+    ],
+    "tags": ["music", "jazz", "food", "nightlife"],
+    "reviews": [
+      { "id": "r1", "author": "Renee P.", "rating": 5, "comment": "Curtis knew literally everyone in both clubs. Felt like being brought in by a friend, not led by a guide.", "date": "2026-03-05" },
+      { "id": "r2", "author": "Tom H.", "rating": 4, "comment": "Gumbo was outstanding. Second club got crowded but the music made up for it.", "date": "2026-01-22" }
+    ],
+    "createdAt": "2025-08-19"
+  },
+  {
+    "id": "galapagos-cruise",
+    "title": "Galápagos Wildlife Cruise",
+    "category": "Wildlife",
+    "location": "Galápagos Islands",
+    "country": "Ecuador",
+    "shortDescription": "A small-boat, five-day cruise through the central islands, with daily snorkelling alongside sea lions, rays, and marine iguanas.",
+    "description": "This cruise runs on a 16-passenger catamaran rather than the larger 90-100 passenger ships common in the islands, which means access to smaller landing sites and far less time waiting in line for a panga ride ashore. A National Park-certified naturalist guide leads two land excursions and one snorkel session daily across islands including Santa Cruz, North Seymour, and Bartolomé. Wildlife here has no learned fear of humans, so encounters happen at a distance regulations would never allow elsewhere: sea lions resting on the path, marine iguanas a metre from your feet, blue-footed boobies mid-courtship dance.",
+    "images": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80",
+      "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=1200&q=80",
+      "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?w=1200&q=80"
+    ],
+    "price": 2350,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 142,
+    "durationDays": 5,
+    "groupSize": "8-16 people",
+    "difficulty": "Easy",
+    "highlights": [
+      "16-passenger catamaran for smaller, quieter landing sites",
+      "Daily snorkelling with sea lions, rays, and reef sharks",
+      "National Park-certified naturalist guide on every excursion",
+      "Visits to Santa Cruz, North Seymour, and Bartolomé islands"
+    ],
+    "includes": [
+      "4 nights cabin accommodation aboard the catamaran",
+      "All meals on board",
+      "Daily guided excursions and snorkelling gear",
+      "National park entrance fees"
+    ],
+    "tags": ["wildlife", "snorkelling", "islands", "boat"],
+    "reviews": [
+      { "id": "r1", "author": "Carla V.", "rating": 5, "comment": "Snorkelling with sea lions on day two was the best wildlife encounter of my life, they were genuinely playing with us.", "date": "2026-04-25" },
+      { "id": "r2", "author": "Mateo R.", "rating": 5, "comment": "Smaller boat made a huge difference — landing sites were never crowded and our guide knew every species by call.", "date": "2026-02-11" }
+    ],
+    "createdAt": "2025-09-09"
+  },
+  {
+    "id": "sahara-stargazing",
+    "title": "Sahara Desert Stargazing Camp",
+    "category": "Adventure",
+    "location": "Merzouga",
+    "country": "Morocco",
+    "shortDescription": "A night in a Berber desert camp on the Erg Chebbi dunes, with camel trekking at sunset and a guided astronomy session after dark.",
+    "description": "Erg Chebbi's dunes rise up to 150 metres and sit far enough from any city that the night sky here is genuinely dark, regularly rated among the clearest in North Africa. You'll ride camels out to camp as the sun sets over the dunes, led by a Berber family who has run camps in this stretch of desert for two generations. After a tagine dinner cooked over coals, an astronomy guide sets up a telescope and walks through the constellations, planets, and, on clear nights, the Milky Way's core. You sleep in traditional Berber tents under wool blankets, with the option to drag a mattress outside for true open-sky sleeping.",
+    "images": [
+      "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&q=80",
+      "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1200&q=80",
+      "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=1200&q=80"
+    ],
+    "price": 165,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 264,
+    "durationDays": 2,
+    "groupSize": "2-12 people",
+    "difficulty": "Easy",
+    "highlights": [
+      "Sunset camel trek across the Erg Chebbi dunes",
+      "Guided astronomy session with a telescope under near-zero light pollution",
+      "Tagine dinner cooked over open coals by a Berber family",
+      "Option to sleep under the open sky outside the tent"
+    ],
+    "includes": [
+      "Camel trek to and from camp",
+      "1 night traditional Berber tent accommodation",
+      "Dinner and breakfast",
+      "Telescope and guided astronomy session"
+    ],
+    "tags": ["desert", "stargazing", "camping", "camel trek"],
+    "reviews": [
+      { "id": "r1", "author": "Aisha M.", "rating": 5, "comment": "Slept outside the tent and saw more stars than I knew existed. The astronomy guide's telescope showed us Saturn's rings clearly.", "date": "2026-03-17" },
+      { "id": "r2", "author": "Pedro L.", "rating": 4, "comment": "Camel trek was rougher than expected but completely worth it for the night sky alone.", "date": "2026-01-03" }
+    ],
+    "createdAt": "2025-08-05"
+  }
+]
