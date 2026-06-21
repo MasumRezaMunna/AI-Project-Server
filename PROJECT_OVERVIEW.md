@@ -29,7 +29,14 @@ A curated catalog of 12 real-feeling travel experiences (Patagonia trekking, a T
 1. **AI Trip Concierge** — describe what you want in plain language; the model reads the live catalog and recommends matches with reasons.
 2. **AI Highlight Generator** — generates a short, specific "why you'll love this" blurb for any experience, optionally tailored to a stated interest.
 
-See `server/README.md` and `client/README.md` for details on each half, including what was intentionally left out of scope (auth, role-based dashboards) versus the full original spec.
+It also has real authentication — JWT-based with bcrypt-hashed passwords — with a login page, a registration page, and one-click demo logins:
+
+| Role | Email | Password |
+|---|---|---|
+| User | `demo.user@wanderlusttrails.example` | `DemoUser123!` |
+| Admin | `demo.admin@wanderlusttrails.example` | `DemoAdmin123!` |
+
+See `server/README.md` and `client/README.md` for details on each half, including what was intentionally left out of scope (role-based dashboards) versus the full original spec.
 
 ## Requirements
 

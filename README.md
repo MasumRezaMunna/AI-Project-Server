@@ -6,7 +6,8 @@ Express + TypeScript REST API powering the Wanderlust Trails travel experience m
 
 - Node.js + Express
 - TypeScript
-- JSON file storage (`src/data/experiences.json`) — no database setup required
+- JSON file storage (`src/data/experiences.json`, `src/data/users.json`) — no database setup required
+- bcryptjs + jsonwebtoken for password hashing and auth
 - Google Gemini API (free tier) for the AI features
 
 ## Setup
@@ -35,6 +36,21 @@ The API runs on `http://localhost:4000` by default.
 | GET | `/api/experiences/categories` | List of distinct categories |
 | GET | `/api/experiences/:id` | Single experience with full detail, reviews, and related items |
 
+### Auth
+
+| Method | Path | Description |
+|---|---|---|
+| POST | `/api/auth/register` | Create an account. Body: `{ "name", "email", "password" }` (password min 8 chars). Self-registration always creates a `user`-role account. Returns `{ token, user }`. |
+| POST | `/api/auth/login` | Body: `{ "email", "password" }`. Returns `{ token, user }`. |
+| GET | `/api/auth/me` | Requires `Authorization: Bearer <token>`. Returns the current user. |
+
+Auth uses JWTs (7-day expiry) signed with `JWT_SECRET`, and passwords are hashed with bcrypt — nothing is stored in plain text. Two demo accounts are auto-seeded into `src/data/users.json` the first time the server starts:
+
+| Role | Email | Password |
+|---|---|---|
+| User | `demo.user@wanderlusttrails.example` | `DemoUser123!` |
+| Admin | `demo.admin@wanderlusttrails.example` | `DemoAdmin123!` |
+
 ### AI features
 
 | Method | Path | Description |
@@ -46,12 +62,18 @@ The API runs on `http://localhost:4000` by default.
 
 ```
 src/
-  server.ts            App entry point
-  types.ts             Shared TypeScript types
-  data/experiences.json  12-item seed catalog
-  routes/experiences.ts  Listing + details endpoints
-  routes/ai.ts            AI concierge + highlight endpoints
-  lib/llm.ts               Gemini API wrapper
+  server.ts                App entry point
+  types.ts                 Shared TypeScript types
+  data/experiences.json     12-item seed catalog
+  data/users.json            Auth users store (auto-seeded with demo accounts)
+  routes/experiences.ts      Listing + details endpoints
+  routes/ai.ts                AI concierge + highlight endpoints
+  routes/auth.ts               Register / login / me endpoints
+  middleware/auth.ts           JWT verification middleware
+  lib/llm.ts                    Gemini API wrapper
+  lib/auth.ts                    Password hashing, JWT signing, demo-account seeding
+  lib/users-store.ts             JSON-file read/write helpers for users
+  lib/demoAccounts.ts             Shared demo credential constants
 ```
 
 ## Notes

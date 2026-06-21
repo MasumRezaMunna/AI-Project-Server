@@ -3,6 +3,8 @@ import express from "express";
 import cors from "cors";
 import experiencesRouter from "./routes/experiences";
 import aiRouter from "./routes/ai";
+import authRouter from "./routes/auth";
+import { seedDemoUsers } from "./lib/auth";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -17,6 +19,7 @@ app.get("/api/health", (_req, res) => {
 
 app.use("/api/experiences", experiencesRouter);
 app.use("/api/ai", aiRouter);
+app.use("/api/auth", authRouter);
 
 // 404 handler
 app.use((_req, res) => {
@@ -31,6 +34,12 @@ app.use(
   }
 );
 
-app.listen(PORT, () => {
-  console.log(`Wanderlust Trails API running on http://localhost:${PORT}`);
-});
+seedDemoUsers()
+  .catch((err) => {
+    console.error("Failed to seed demo accounts:", err);
+  })
+  .finally(() => {
+    app.listen(PORT, () => {
+      console.log(`Wanderlust Trails API running on http://localhost:${PORT}`);
+    });
+  });
