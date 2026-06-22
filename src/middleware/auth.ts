@@ -1,13 +1,18 @@
 import { Request, Response, NextFunction } from "express";
-import { verifyToken } from "../lib/auth";
-import { findUserById } from "../lib/users-store";
+import admin from "../lib/firebaseAdmin";
+import UserModel from "../models/User";
 import { PublicUser, UserRole } from "../types";
 
 export interface AuthedRequest extends Request {
+  /** Populated only if a matching MongoDB profile already exists. */
   user?: PublicUser;
+  /** Always populated once the Firebase ID token verifies successfully. */
+  firebaseUid?: string;
+  firebaseEmail?: string;
+  firebaseName?: string;
 }
 
-export function requireAuth(req: AuthedRequest, res: Response, next: NextFunction) {
+export async function requireAuth(req: AuthedRequest, res: Response, next: NextFunction) {
   const header = req.headers.authorization;
   const token = header?.startsWith("Bearer ") ? header.slice(7) : undefined;
 
@@ -16,12 +21,22 @@ export function requireAuth(req: AuthedRequest, res: Response, next: NextFunctio
   }
 
   try {
-    const payload = verifyToken(token);
-    const user = findUserById(payload.sub);
-    if (!user) {
-      return res.status(401).json({ error: "User no longer exists." });
+    const decoded = await admin.auth().verifyIdToken(token);
+    req.firebaseUid = decoded.uid;
+    req.firebaseEmail = decoded.email;
+    req.firebaseName = typeof decoded.name === "string" ? decoded.name : undefined;
+
+    const profile = await UserModel.findOne({ firebaseUid: decoded.uid });
+    if (profile) {
+      req.user = {
+        id: profile.firebaseUid,
+        name: profile.name,
+        email: profile.email,
+        role: profile.role,
+      };
     }
-    req.user = { id: user.id, name: user.name, email: user.email, role: user.role };
+    // If no MongoDB profile exists yet, req.user stays undefined — routes
+    // that need a fully synced profile (like /me) handle that case directly.
     next();
   } catch {
     return res.status(401).json({ error: "Invalid or expired token." });

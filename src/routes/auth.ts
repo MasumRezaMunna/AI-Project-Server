@@ -1,81 +1,69 @@
-import { Router, Request, Response } from "express";
-import { randomUUID } from "crypto";
-import {
-  LoginRequestBody,
-  RegisterRequestBody,
-  AuthResponse,
-  PublicUser,
-  User,
-} from "../types";
-import { findUserByEmail, addUser } from "../lib/users-store";
-import { hashPassword, verifyPassword, signToken } from "../lib/auth";
+import { Router, Response } from "express";
+import UserModel from "../models/User";
+import { PublicUser, SyncProfileRequestBody } from "../types";
 import { requireAuth, AuthedRequest } from "../middleware/auth";
 
 const router = Router();
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function toPublicUser(user: User): PublicUser {
-  return { id: user.id, name: user.name, email: user.email, role: user.role };
+function toPublicUser(profile: {
+  firebaseUid: string;
+  name: string;
+  email: string;
+  role: "user" | "admin";
+}): PublicUser {
+  return { id: profile.firebaseUid, name: profile.name, email: profile.email, role: profile.role };
 }
 
-router.post("/register", async (req: Request, res: Response) => {
-  const { name, email, password } = (req.body ?? {}) as Partial<RegisterRequestBody>;
-
-  if (!name?.trim() || !email?.trim() || !password) {
-    return res.status(400).json({ error: "Name, email, and password are all required." });
-  }
-  if (!EMAIL_REGEX.test(email.trim())) {
-    return res.status(400).json({ error: "Enter a valid email address." });
-  }
-  if (password.length < 8) {
-    return res.status(400).json({ error: "Password must be at least 8 characters." });
-  }
-  if (findUserByEmail(email)) {
-    return res.status(409).json({ error: "An account with that email already exists." });
+/**
+ * Called once right after the client creates a Firebase account
+ * (createUserWithEmailAndPassword). Creates the matching MongoDB profile.
+ * Self-registration always creates a "user"-role profile — the admin
+ * account is only ever created by the seed script.
+ */
+router.post("/register", requireAuth, async (req: AuthedRequest, res: Response) => {
+  if (!req.firebaseUid || !req.firebaseEmail) {
+    return res.status(401).json({ error: "Invalid token." });
   }
 
-  const user: User = {
-    id: randomUUID(),
-    name: name.trim(),
-    email: email.trim().toLowerCase(),
-    passwordHash: await hashPassword(password),
-    // Self-registration always creates a regular user — the admin account is
-    // seeded separately and is never assignable from the public API.
+  const existing = await UserModel.findOne({ firebaseUid: req.firebaseUid });
+  if (existing) {
+    return res.status(409).json({ error: "A profile already exists for this account." });
+  }
+
+  const { name } = (req.body ?? {}) as SyncProfileRequestBody;
+
+  const profile = await UserModel.create({
+    firebaseUid: req.firebaseUid,
+    name: name?.trim() || req.firebaseName || req.firebaseEmail.split("@")[0],
+    email: req.firebaseEmail,
     role: "user",
-    createdAt: new Date().toISOString(),
-  };
-  addUser(user);
+  });
 
-  const token = signToken({ sub: user.id, role: user.role });
-  const payload: AuthResponse = { token, user: toPublicUser(user) };
-  res.status(201).json(payload);
+  res.status(201).json({ user: toPublicUser(profile) });
 });
 
-router.post("/login", async (req: Request, res: Response) => {
-  const { email, password } = (req.body ?? {}) as Partial<LoginRequestBody>;
-
-  if (!email?.trim() || !password) {
-    return res.status(400).json({ error: "Email and password are required." });
+/**
+ * Returns the current user's MongoDB profile, auto-creating one with the
+ * default "user" role if it doesn't exist yet. This covers Google sign-in,
+ * which signs a user into Firebase directly without ever calling /register.
+ */
+router.get("/me", requireAuth, async (req: AuthedRequest, res: Response) => {
+  if (!req.firebaseUid || !req.firebaseEmail) {
+    return res.status(401).json({ error: "Invalid token." });
   }
 
-  const user = findUserByEmail(email);
-  if (!user) {
-    return res.status(401).json({ error: "Incorrect email or password." });
+  let profile = await UserModel.findOne({ firebaseUid: req.firebaseUid });
+
+  if (!profile) {
+    profile = await UserModel.create({
+      firebaseUid: req.firebaseUid,
+      name: req.firebaseName || req.firebaseEmail.split("@")[0],
+      email: req.firebaseEmail,
+      role: "user",
+    });
   }
 
-  const valid = await verifyPassword(password, user.passwordHash);
-  if (!valid) {
-    return res.status(401).json({ error: "Incorrect email or password." });
-  }
-
-  const token = signToken({ sub: user.id, role: user.role });
-  const payload: AuthResponse = { token, user: toPublicUser(user) };
-  res.json(payload);
-});
-
-router.get("/me", requireAuth, (req: AuthedRequest, res: Response) => {
-  res.json({ user: req.user });
+  res.json({ user: toPublicUser(profile) });
 });
 
 export default router;

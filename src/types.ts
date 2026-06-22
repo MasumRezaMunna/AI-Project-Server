@@ -70,40 +70,14 @@ export interface AIHighlightResponseBody {
 
 export type UserRole = "user" | "admin";
 
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-  passwordHash: string;
-  role: UserRole;
-  createdAt: string;
-}
-
-/** User shape safe to send to the client — never includes passwordHash. */
+/** User shape sent to the client — sourced from the MongoDB profile. */
 export interface PublicUser {
-  id: string;
+  id: string; // Firebase UID
   name: string;
   email: string;
   role: UserRole;
 }
 
-export interface AuthResponse {
-  token: string;
-  user: PublicUser;
-}
-
-export interface RegisterRequestBody {
-  name: string;
-  email: string;
-  password: string;
-}
-
-export interface LoginRequestBody {
-  email: string;
-  password: string;
-}
-
-export interface JwtPayload {
-  sub: string; // user id
-  role: UserRole;
+export interface SyncProfileRequestBody {
+  name?: string;
 }

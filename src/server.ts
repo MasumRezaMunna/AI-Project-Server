@@ -4,7 +4,7 @@ import cors from "cors";
 import experiencesRouter from "./routes/experiences";
 import aiRouter from "./routes/ai";
 import authRouter from "./routes/auth";
-import { seedDemoUsers } from "./lib/auth";
+import { connectDB } from "./lib/db";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -34,9 +34,9 @@ app.use(
   }
 );
 
-seedDemoUsers()
+connectDB()
   .catch((err) => {
-    console.error("Failed to seed demo accounts:", err);
+    console.error("Failed to connect to MongoDB:", err);
   })
   .finally(() => {
     app.listen(PORT, () => {
