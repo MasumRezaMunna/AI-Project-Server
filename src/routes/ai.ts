@@ -46,7 +46,7 @@ Catalog:
 ${JSON.stringify(catalogSummary)}`;
 
   try {
-    const raw = await callAI({ system, userMessage, maxTokens: 600 });
+    const raw = await callAI({ system, userMessage, maxTokens: 1500 });
     const parsed = parseJsonFromAI<AIRecommendResponseBody>(raw);
 
     // Validate returned ids actually exist, drop any hallucinated ones.
@@ -101,7 +101,7 @@ Description: ${experience.description}
 ${interest && interest.trim() ? `Traveller's stated interest: "${interest.trim()}"` : "Traveller has not specified a particular interest — write a general but specific highlight."}`;
 
   try {
-    const highlight = await callAI({ system, userMessage, maxTokens: 200 });
+    const highlight = await callAI({ system, userMessage, maxTokens: 400 });
     const payload: AIHighlightResponseBody = { highlight };
     res.json(payload);
   } catch (err) {

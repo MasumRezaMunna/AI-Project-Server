@@ -47,6 +47,10 @@ export async function callAI(params: {
       generationConfig: {
         maxOutputTokens: params.maxTokens ?? 700,
         temperature: 0.7,
+        // Disable the thinking phase so the full token budget is available for
+        // real output. Without this, gemini-2.5-flash burns the majority of
+        // maxOutputTokens on internal reasoning and truncates the actual reply.
+        thinkingConfig: { thinkingBudget: 0 },
       },
     }),
   });
